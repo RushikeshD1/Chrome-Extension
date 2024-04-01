@@ -10,20 +10,19 @@ speechRecognition.interimResults = true;
 speechRecognition.language = "en-us"
 
 let transcript = "";
+
 speechRecognition.onresult = function(event){
     transcript = "";
-    // for(i=0; i<event.results.length; i++){
-    //     transcript += event.results[i][0].transcript;
-    // }
-    event.results.forEach(result => {
-        transcript += result[0].transcript;
-    });
+    for(i=0; i<event.results.length; ++i){
+        transcript += event.results[i][0].transcript;
+    }
 }
 
 const doSomeThing = () => {
     if(btnQuerious.hasAttribute('listening') === false){
         btnQuerious.setAttribute('listening',true);
         speechRecognition.start();
+        transcript = "";
     }else{
         btnQuerious.removeAttribute('listening',false);
         speechRecognition.stop();
