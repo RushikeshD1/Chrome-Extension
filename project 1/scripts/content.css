@@ -1,0 +1,67 @@
+button#btnQuerious{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #74b9ff;
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    z-index: 1000;
+   
+
+    animation-name: stretch;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+button#btnQuerious:hover{ 
+      
+    background-color: teal;
+    animation: none;
+    border-color: gray;
+    cursor: pointer;    
+    transform: scale(1.2);
+}
+
+button#btnQuerious[listening]{
+    animation-name: fast-stretch;
+    animation-duration: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+}
+
+@keyframes stretch{
+    0%{
+        background-color: #74b9ff;
+        transform: scale(1);
+               
+    }
+    50%{
+        background-color: #74b9ff;
+        transform: scale(1);   
+        
+    }
+    100%{
+        background-color: teal;
+        border-color: gray;
+        transform: scale(1.2);        
+    }
+}
+
+@keyframes fast-stretch{
+    0%{
+        background-color: #74b9ff;
+        transform: scale(1);
+               
+    }       
+    100%{
+        background-color: teal;
+        border-color: gray;
+        transform: scale(1.2);        
+    }
+}
+
