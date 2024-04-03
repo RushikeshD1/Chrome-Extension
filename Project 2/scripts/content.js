@@ -11,95 +11,143 @@ aliViewPosts.classList.add(
 aliViewPosts.setAttribute("target", "_blank");
 aliViewPosts.setAttribute("href", "https://www.linkedin.com/my-items/");
 
-let aHomeView = document.querySelector(
-  ".app-aware-link",
-  ".global-nav__primary-link"
-);
-aHomeView.setAttribute("target", "_blank");
-aHomeView.setAttribute(
-  "href",
-  "https://www.linkedin.com/feed/?doFeedRefresh=true&nis=true&"
-);
-
-let aNetworkView = document.querySelector(
-  ".app-aware-link",
-  ".global-nav__primary-link"
-);
-aNetworkView.setAttribute("target", "_blank");
-aNetworkView.setAttribute("href", "https://www.linkedin.com/mynetwork/");
-
-let aJobsView = document.querySelector(
-  ".app-aware-link",
-  ".global-nav__primary-link"
-);
-aJobsView.setAttribute("target", "_blank");
-aJobsView.setAttribute("href", "https://www.linkedin.com/jobs/?=");
-
-let aMessagingView = document.querySelector(
-  ".app-aware-link",
-  ".global-nav__primary-link"
-);
-aMessagingView.setAttribute("target", "_blank");
-aMessagingView.setAttribute(
-  "href",
-  "https://www.linkedin.com/messaging/thread/2-M2Q1NTVjNTQtYWE0ZC00M2FkLWI0YTQtMjc4ZGQzODlkNDI3XzAxMw==/"
-);
-
-let aNotificationView = document.querySelector(
-  ".app-aware-link",
-  ".global-nav__primary-link"
-);
-aNotificationView.setAttribute("target", "_blank");
-aNotificationView.setAttribute(
-  "href",
-  "https://www.linkedin.com/notifications/?="
-);
 
 
-// let savedPostIconMenus = document.querySelectorAll(
-//     ".feed-shared-control-menu.feed-shared-update-v2__control-menu.feed-shared-update-v2--with-hide-post"
-//   );
+// let aNetworkView = document.querySelector(".global-nav__primary-item .global-nav__primary-link");
+// if (aNetworkView) {
+//   aNetworkView.setAttribute("target", "_blank");
+//   aNetworkView.setAttribute("href", "https://www.linkedin.com/mynetwork/");
+// } 
+
+// let aJobsView = document.querySelector(
+//   ".app-aware-link"
+// );
+// aJobsView.setAttribute("target", "_blank");
+// aJobsView.setAttribute("href", "https://www.linkedin.com/jobs/?=");
+
+// let aMessagingView = document.querySelector(
+//   ".app-aware-link"
+// );
+// aMessagingView.setAttribute("target", "_blank");
+// aMessagingView.setAttribute(
+//   "href",
+//   "https://www.linkedin.com/messaging/thread/2-M2Q1NTVjNTQtYWE0ZC00M2FkLWI0YTQtMjc4ZGQzODlkNDI3XzAxMw==/"
+// );
+
+// let aNotificationView = document.querySelector(
+//   ".app-aware-link"
+// );
+// aNotificationView.setAttribute("target", "_blank");
+// aNotificationView.setAttribute(
+//   "href",
+//   "https://www.linkedin.com/notifications/?="
+// );
+
+// let aNetworkView = document.querySelector("a[href='https://www.linkedin.com/mynetwork/']");
+// if (aNetworkView) {
+//   aNetworkView.setAttribute("target", "_blank");
+//   aNetworkView.setAttribute("href", "https://www.linkedin.com/mynetwork/");
+// } 
+
+// let aNetworkView = document.querySelector("a[href='https://www.linkedin.com/mynetwork/']");
+
+// // Check if aNetworkView is not null before setting attributes and attaching event listener
+// if (aNetworkView) {
+//   // Set attributes to open link in a new tab
+//   aNetworkView.setAttribute("target", "_blank");
+//   aNetworkView.setAttribute("href", "https://www.linkedin.com/mynetwork/");
   
-//   savedPostIconMenus.forEach(savedPostIconMenu => {
-//     let savedPostIcon = document.createElementNS(
-//       "http://www.w3.org/2000/svg",
-//       "svg"
-//     );
-//     savedPostIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-    
-//     savedPostIcon.setAttribute("viewBox", "0 0 24 24");
-//     savedPostIcon.setAttribute("fill", "rgba(0, 0, 0, 1)");
-    
-//     savedPostIcon.setAttribute("width", "20");
-//     savedPostIcon.setAttribute("height", "30");
-//     savedPostIcon.setAttribute("focusable", "false");
-//     savedPostIcon.style.opacity = "0.7";
-//     savedPostIcon.innerHTML = `<path d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2zm0 16.553-6-3.428-6 3.428V4h12v14.553z"></path>`;
-  
-//     let firstChild = savedPostIconMenu.firstElementChild;
-//     savedPostIconMenu.insertBefore(savedPostIcon, firstChild);
+//   // Attach event listener to handle click event
+//   aNetworkView.addEventListener("click", function(event) {
+//     event.preventDefault(); // Prevent default action
+//     window.open(aNetworkView.getAttribute("href"), '_blank'); // Open link in a new tab
 //   });
+// } 
 
-  let savedPostIconMenus = document.querySelectorAll(".feed-shared-control-menu.feed-shared-update-v2__control-menu.feed-shared-update-v2--with-hide-post");
+// let aJobsView = document.querySelector("a[href='https://www.linkedin.com/jobs/']");
+// if (aJobsView) {
+//   aJobsView.setAttribute("target", "_blank");
+//   aJobsView.setAttribute("href", "https://www.linkedin.com/jobs/?=");
+// }
 
-  savedPostIconMenus.forEach(savedPostIconMenu => {
-      let savedPostIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-      savedPostIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-      savedPostIcon.setAttribute("class", "artdeco-button__icon mercado-match");
-      savedPostIcon.setAttribute("viewBox", "0 0 24 24");
-      savedPostIcon.setAttribute("fill", "rgba(0, 0, 0, 1)");
-      savedPostIcon.setAttribute("width", "20");
-      savedPostIcon.setAttribute("height", "30");
-      savedPostIcon.setAttribute("focusable", "false");
-      savedPostIcon.style.opacity = "0.7";
-      savedPostIcon.innerHTML = `<path d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2zm0 16.553-6-3.428-6 3.428V4h12v14.553z"></path>`;
-  
-      let triggerButton = savedPostIconMenu.querySelector(".feed-shared-control-menu__trigger");
-      
-    savedPostIconMenu.insertBefore(savedPostIcon, triggerButton);
-      
+// let aMessagingView = document.querySelector("a[href='https://www.linkedin.com/messaging/thread/2-M2Q1NTVjNTQtYWE0ZC00M2FkLWI0YTQtMjc4ZGQzODlkNDI3XzAxMw==/']");
+// if (aMessagingView) {
+//   aMessagingView.setAttribute("target", "_blank");
+//   aMessagingView.setAttribute("href", "https://www.linkedin.com/messaging/thread/2-M2Q1NTVjNTQtYWE0ZC00M2FkLWI0YTQtMjc4ZGQzODlkNDI3XzAxMw==/");
+// }
+
+// let aNotificationView = document.querySelector("a[href='https://www.linkedin.com/notifications/']");
+// if (aNotificationView) {
+//   aNotificationView.setAttribute("target", "_blank");
+//   aNotificationView.setAttribute("href", "https://www.linkedin.com/notifications/?=");
+// }
+
+
+function openHomePage() {
+  let homeLink = document.querySelector("a[href*='/feed']");
+  if (homeLink) {
+    homeLink.click();
+  }
+}
+
+function openMyNetworkPage() {
+  let navLinks = document.querySelectorAll("ul.global-nav__primary-items a");
+  navLinks.forEach(link => {
+    if (link.textContent.trim().toLowerCase() === "my network") {
+      link.click();
+      return;
+    }
   });
+}
+
+function openJobsPage() {
+  let jobsLink = document.querySelector("a[href='https://www.linkedin.com/jobs/?']");
+  if (jobsLink) {
+      jobsLink.click();
+  }
+}
+
+function openMessagePage() {
+  let messagesLink = document.querySelector("a.app-aware-link.global-nav__primary-link[href*='/messaging']");
+
+  if (messagesLink) {
+    messagesLink.click();
+  }
+}
+
+function openNotifications() {
+  let notificationLink = document.querySelector("a[href*='/notifications']");
+  if (notificationLink) {    
+    notificationLink.click();
+  }
+}
+
+let savedPostIconMenus = document.querySelectorAll(
+    ".feed-shared-control-menu.feed-shared-update-v2__control-menu.feed-shared-update-v2--with-hide-post"
+  );
   
+  savedPostIconMenus.forEach(savedPostIconMenu => {
+    let savedPostIcon = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "svg"
+    );
+    savedPostIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    
+    savedPostIcon.setAttribute("viewBox", "0 0 24 24");
+    savedPostIcon.setAttribute("fill", "rgba(0, 0, 0, 1)");
+    
+    savedPostIcon.setAttribute("width", "20");
+    savedPostIcon.setAttribute("height", "30");
+    savedPostIcon.setAttribute("focusable", "false");
+    savedPostIcon.style.opacity = "0.7";
+    savedPostIcon.innerHTML = `<path d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2zm0 16.553-6-3.428-6 3.428V4h12v14.553z"></path>`;
+  
+    let firstChild = savedPostIconMenu.firstElementChild;
+    savedPostIconMenu.insertBefore(savedPostIcon, firstChild);
+  });
+
+  
+ 
 
 // const savedPostDirectly = () => {
 
@@ -163,40 +211,42 @@ speechRecognition.start();
 
 speechRecognition.onresult = function (event) {
   let transcript = event.results[event.resultIndex][0].transcript;
+  console.log(transcript)
 
   console.log(event);
 
-  if (transcript.trim().toLowerCase().includes("open saved post")) {
+  if (transcript.trim().toLowerCase().includes("open saved")) {
+    console.log("saved post");
     aliViewPosts.click();
   }
 
+  
   if (transcript.trim().toLowerCase().includes("open home")) {
-    aHomeView.click();
-  }
+    
+    openHomePage();
+    }
+  
+  if (transcript.trim().toLowerCase().includes("open my network")) {
+  console.log("my network");
+  openMyNetworkPage();
+  } 
 
-  if (transcript.trim().toLowerCase().includes("open network")) {
-    aNetworkView.click();
-  }
+if (transcript.includes("jobs")) {
+  console.log("jobs");
+    openJobsPage();
+}
 
-  if (transcript.trim().toLowerCase().includes("open jobs")) {
-    aJobsView.click();
-  }
+if (transcript.trim().toLowerCase().includes("open message")) {
+  
+  openMessagePage();
+  } 
 
-  if (transcript.trim().toLowerCase().includes("open messaging")) {
-    aMessagingView.click();
-  }
+  if (transcript.trim().toLowerCase().includes("open notification")) {
+  
+    openNotifications();
+    }
 
-  if (transcript.trim().toLowerCase().includes("open notifications")) {
-    aNotificationView.click();
-  }
-};
-
-aHomeView.appendChild(spanViewPosts);
-aNetworkView.appendChild(spanViewPosts);
-aJobsView.appendChild(spanViewPosts);
-aMessagingView.appendChild(spanViewPosts);
-aNotificationView.appendChild(spanViewPosts);
-
+}
 aliViewPosts.appendChild(spanViewPosts);
 liViewPosts.appendChild(aliViewPosts);
 
