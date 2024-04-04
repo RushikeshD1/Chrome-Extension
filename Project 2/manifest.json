@@ -19,5 +19,10 @@
   "web_accessible_resources":[{
     "resources":["images/saved.png"],
     "matches": ["*://www.linkedin.com/*"]
-  }]
+  }], 
+  
+  "action": {
+    "default_popup": "scripts/popup.html"    
+  },
+  "permissions": ["storage"] 
 }
