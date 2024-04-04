@@ -122,45 +122,45 @@ function openNotifications() {
   }
 }
 
-function addIconToPost(postElement) {
-    let controlMenu = postElement.querySelector(".feed-shared-control-menu.feed-shared-update-v2__control-menu");
-    if (controlMenu) {
-        let savedPostIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        savedPostIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-        savedPostIcon.setAttribute("viewBox", "0 0 24 24");
-        savedPostIcon.setAttribute("fill", "rgba(0, 0, 0, 1)");    
-        savedPostIcon.setAttribute("width", "20");
-        savedPostIcon.setAttribute("height", "30");
-        savedPostIcon.setAttribute("focusable", "false");
-        savedPostIcon.style.opacity = "0.7";
-        savedPostIcon.innerHTML = `<path d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2zm0 16.553-6-3.428-6 3.428V4h12v14.553z"></path>`;
+// function addIconToPost(postElement) {
+//     let controlMenu = postElement.querySelector(".feed-shared-control-menu.feed-shared-update-v2__control-menu");
+//     if (controlMenu) {
+//         let savedPostIcon = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+//         savedPostIcon.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+//         savedPostIcon.setAttribute("viewBox", "0 0 24 24");
+//         savedPostIcon.setAttribute("fill", "rgba(0, 0, 0, 1)");    
+//         savedPostIcon.setAttribute("width", "20");
+//         savedPostIcon.setAttribute("height", "30");
+//         savedPostIcon.setAttribute("focusable", "false");
+//         savedPostIcon.style.opacity = "0.7";
+//         savedPostIcon.innerHTML = `<path d="M18 2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22V4c0-1.103-.897-2-2-2zm0 16.553-6-3.428-6 3.428V4h12v14.553z"></path>`;
 
-        let firstChild = controlMenu.firstElementChild;
-        controlMenu.insertBefore(savedPostIcon, firstChild);
-    }
-}
+//         let firstChild = controlMenu.firstElementChild;
+//         controlMenu.insertBefore(savedPostIcon, firstChild);
+//     }
+// }
 
-function handleMutations(mutationsList, observer) {
-    for (let mutation of mutationsList) {
-        if (mutation.type === 'childList') {
-            mutation.addedNodes.forEach(node => {
-                if (node.nodeType === 1 && node.matches('.feed-shared-update-v2')) {
-                    addIconToPost(node);
-                }
-            });
-        }
-    }
-}
-// Create a MutationObserver instance
-let observer = new MutationObserver(handleMutations);
+// function handleMutations(mutationsList, observer) {
+//     for (let mutation of mutationsList) {
+//         if (mutation.type === 'childList') {
+//             mutation.addedNodes.forEach(node => {
+//                 if (node.nodeType === 1 && node.matches('.feed-shared-update-v2')) {
+//                     addIconToPost(node);
+//                 }
+//             });
+//         }
+//     }
+// }
+// // Create a MutationObserver instance
+// let observer = new MutationObserver(handleMutations);
 
-// Start observing changes to the DOM subtree
-observer.observe(document.body, { childList: true, subtree: true });
+// // Start observing changes to the DOM subtree
+// observer.observe(document.body, { childList: true, subtree: true });
 
-// Add icon to existing posts
-document.querySelectorAll('.feed-shared-update-v2').forEach(postElement => {
-    addIconToPost(postElement);
-});
+// // Add icon to existing posts
+// document.querySelectorAll('.feed-shared-update-v2').forEach(postElement => {
+//     addIconToPost(postElement);
+// });
 
 // const savedPostDirectly = () => {
 
@@ -244,7 +244,7 @@ speechRecognition.onresult = function (event) {
   openMyNetworkPage();
   } 
 
-if (transcript.includes("jobs")) {
+if (transcript.includes("open jobs")) {
   console.log("jobs");
     openJobsPage();
 }
